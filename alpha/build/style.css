@@ -35,13 +35,14 @@ html {
 }
 
 body {
+    padding-block: 50px;
     background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, p, a, li {
     margin-block: 0px;
     color: var(--text-light);
-    font-family: var(--font-ikea);
+    font-family: var(--font-sans);
 }
 
 a {
@@ -52,6 +53,9 @@ a {
     /* not centered */
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-ikea);
 }
 
 .container {
