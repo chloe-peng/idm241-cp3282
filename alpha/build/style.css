@@ -44,6 +44,16 @@ h1, h2, h3, h4, p, a, li {
     font-family: var(--font-ikea);
 }
 
+a {
+    text-decoration: none;
+}
+
+.ikea-nav-button {
+    /* not centered */
+    display: flex;
+    align-items: center;
+}
+
 .container {
     display: block;
 
@@ -75,20 +85,36 @@ h1, h2, h3, h4, p, a, li {
     transition: transform .5s ease;
 }
 
+.cont-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 700;
+}
+
 .cont-img:hover img{
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.cont-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    font-weight: 700;
+.container:hover p {
+    text-decoration: underline;
+    color: black;
 }
 
+.arrow-svg-icon {
+    fill: var(--text-original);
+}
+
+.container:hover .arrow-svg-icon {
+    fill: var(--text-hover);
+}
+
+/* Alpha Description */
 main {
+        margin: 40px 120px;
+
     h1, h2, h3, h4, p, a, li {
         margin-block: 0px;
         color: var(--text-light);
