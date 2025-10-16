@@ -80,9 +80,6 @@ b {
     font-weight: 800;
 }
 
-a {
-    text-decoration: none;
-}
 
 .ikea-nav-button {
     /* not centered */
@@ -91,6 +88,10 @@ a {
     justify-content: center;
 
     font-family: var(--font-ikea);
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 .container {
