@@ -11,12 +11,19 @@
 <body>
     <div class="centered">
         <h1>Alpha Build</h1>
+        <div>
+            <a href="https://www.ikea.com/us/en/" target="_blank"><h3>Click to View Original Interface<img src="arrow-icon-blue.png" alt="Arrow pointing to the bottom right" style="width: 20px; margin-left: 10px;"></h3>
+            </a>
+            <p>
+                Instructions: To find the microinteraction, click on the <b>'Room'</b> button in the <b>Navigation Menu</b>
+            </p>
+        </div>
     </div>
     <section class="ikea-nav-button">
         <div>
             <a class="container" href="https://www.ikea.com/us/en/rooms/living-room/">
                 <div class="cont-img">
-                    <img src="ikea-image.jpeg" alt="Top-down view of a living room">
+                    <img src="ikea-img-living.jpeg" alt="Top-down view of a living room">
                 </div>
                 <div class="cont-bottom">
                     <span>
@@ -33,18 +40,52 @@
                 </div>
             </a>
         </div>
+
+        <div>
+            <a class="container" href="https://www.ikea.com/us/en/rooms/living-room/">
+                <div class="cont-img rounded">
+                    <img src="ikea-img-dining.jpeg" alt="Photo of a dining table">
+                </div>
+                <div class="cont-bottom">
+                    <span>
+                        <p>Dining room</p>
+                    </span>
+
+                    <span>
+                        <svg viewBox="0 0 24 24" focusable="false" width="24" height="24" aria-hidden="true" class="arrow-svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" 
+                                d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <a class="container" href="https://www.ikea.com/us/en/rooms/living-room/">
+                <div class="cont-img">
+                    <img src="ikea-img-office.jpeg" alt="Photo of a office space">
+                </div>
+                <div class="cont-bottom">
+                    <span>
+                        <p>Home office</p>
+                    </span>
+
+                    <span>
+                        <svg viewBox="0 0 24 24" focusable="false" width="24" height="24" aria-hidden="true" class="arrow-svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" 
+                                d="m20.0008 12.0001-8-8.001-1.4143 1.414L16.1727 11H4v2h12.1723l-5.5868 5.5866 1.4141 1.4142 8.0012-8.0007z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
     </section>
     <main>
         <div>
-            <a href="https://www.ikea.com/us/en/" target="_blank"><h3>Click to View Original Interface<img src="arrow-icon-blue.png" alt="Arrow pointing to the bottom right" style="width: 20px; margin-left: 10px;"></h3>
-            </a>
-            <p>
-                Instructions: To find the microinteraction, click on the <b>'Room'</b> button in the <b>Navigation Menu</b>
-            </p>
-        </div>
-
-        <div>
-            <h3>Triggers - 'Living Room' Button</h3>
+            <h3>Triggers - 'Living Room', 'Dining Room', 'Home Office' Button</h3>
             <ul>
                 <li>Hover on</li>
                 <li>Hover off</li>
@@ -53,7 +94,7 @@
         </div>
 
         <div>
-            <h3>Rules - 'Living Room' Button</h3>
+            <h3>Rules - 'Living Room', 'Dining Room', 'Home Office' Button</h3>
             <ul>
                 <li>Hover on</li>
                     <ul>
@@ -77,20 +118,20 @@
         </div>
 
         <div>
-            <h3>Feedback - 'Living Room' Button</h3>
+            <h3>Feedback - 'Living Room', 'Dining Room', 'Home Office' Button</h3>
             <ul>
                 <li>Hover on</li>
                     <ul>
                         <li>Cusor changes to a pointer finger</li>
-                        <li>The 'Living Room' text and arrow to the right of the text (located under the image) changes from a light gray color to a black color</li>
-                        <li>The 'Living Room' text is underlined</li>
+                        <li>The text and arrow to the right of the text (located under the image) changes from a light gray color to a black color</li>
+                        <li>The text (beneath the image) is underlined</li>
                         <li>Image is zoomed in about 1.1x the current scale</li>
                     </ul>
                 <li>Hover off</li>
                     <ul>
                         <li>Cusor changes to default</li>
-                        <li>The 'Living Room' text and arrow to the right of text changes from a black color to a light gray color</li>
-                        <li>The 'Living Room' text is no longer underlined</li>
+                        <li>The text and arrow to the right of text changes from a black color to a light gray color</li>
+                        <li>The text (beneath the image) is no longer underlined</li>
                         <li>Image returns back to its original scale (1x)</li>
                     </ul>
                 <li>Click</li>
@@ -101,7 +142,7 @@
         </div>
 
         <div>
-            <h3>Loops & Modes - 'Living Room' Button</h3>
+            <h3>Loops & Modes - 'Living Room', 'Dining Room', 'Home Office' Button</h3>
             <ul>
                 <li>No loops or modes</li>
             </ul>

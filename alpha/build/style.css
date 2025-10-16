@@ -24,7 +24,7 @@
 html {
     /* font-size: 16px; */
 
-    --background-color: #fff4e3;
+    --background-color: #f3f3f3;
     --text-original: #484848;
     --text-hover: #000;
 
@@ -82,22 +82,27 @@ b {
 
 
 .ikea-nav-button {
-    /* not centered */
     display: flex;
     align-items: center;
     justify-content: center;
 
     font-family: var(--font-ikea);
-    
-    a {
-        text-decoration: none;
-    }
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--descrip-text-light);
+}
+
+.ikea-nav-button a {
+    text-decoration: none;
+}
+
+.ikea-nav-button div {
+    margin-right: 20px;
 }
 
 .container {
     display: block;
 
-    width: 20vw;
+    width: 160px;
     height: auto;
 }
 
@@ -106,17 +111,14 @@ b {
 }
 
 .cont-img {
-    /* width: 160px;
-    height: 200px; 
-    Image is responsive, but the text isn't*/
-
-
     aspect-ratio: 3 / 4;
     width: 100%;
-    
     overflow: hidden;
+    margin-bottom: .2rem;
+}
 
-    margin-bottom: .5rem;
+.rounded {
+    border-radius: 64px 64px 0 0;
 }
 
 .container img{
@@ -133,6 +135,8 @@ b {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -157,13 +161,14 @@ b {
 /* Alpha Description */
 main {
     margin: 40px 120px;
+}
 
-    div {
-        padding-block: 20px;
-        border-bottom: 1px solid var(--text-light);
-    }
+main div {
+    padding-block: 20px;
+    border-bottom: 1px solid var(--descrip-text-light);
 }
 
 .centered {
     text-align: center;
+    margin-bottom: 20px;
 }
