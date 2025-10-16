@@ -146,7 +146,7 @@ b {
     font-weight: 700;
 }
 
-.cont-img:hover img{
+.container:hover img{
     cursor: pointer;
     transform: scale(1.1);
 }
