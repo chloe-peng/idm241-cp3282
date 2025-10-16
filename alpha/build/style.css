@@ -85,6 +85,7 @@ b {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     font-family: var(--font-ikea);
     padding-bottom: 20px;
@@ -96,7 +97,7 @@ b {
 }
 
 .ikea-nav-button div {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .container {
@@ -104,6 +105,7 @@ b {
 
     width: 160px;
     height: auto;
+    margin-bottom: 20px;
 }
 
 .container p {
@@ -114,11 +116,15 @@ b {
     aspect-ratio: 3 / 4;
     width: 100%;
     overflow: hidden;
-    margin-bottom: .2rem;
+    margin-bottom: .4rem;
 }
 
-.rounded {
+.rounded-arch {
     border-radius: 64px 64px 0 0;
+}
+
+.rounded-oval {
+    border-radius: 64px;
 }
 
 .container img{
