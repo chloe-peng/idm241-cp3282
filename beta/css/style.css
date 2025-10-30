@@ -71,13 +71,27 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .container {
     width: 25%;
     border: 1px solid #000000;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 10px;
     margin-right: 10px
+}
+
+@media (max-width: 1300px) {
+    .container {
+        width: 40%;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+    }
 }
