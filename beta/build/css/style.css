@@ -273,6 +273,8 @@ section {
     fill: var(--red);
     color: var(--red);
     stroke: var(--red);
+
+    transform: scale(1.1);
 }
 
 .heart-icon.liked .heart-svg {
