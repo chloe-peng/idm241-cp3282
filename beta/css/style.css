@@ -8,6 +8,10 @@ html {
     --background-color: #EEE8DF;
     --text-light: #2C365A;
 
+    --light-gray: rgba(223, 223, 223, 75%);
+    --dark-gray: rgba(17, 17, 17, 75%);
+
+
     --font-sans: Manrope;
 }
 
@@ -101,19 +105,19 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;              /* circle size */
+    width: 40px;              
     height: 40px;
-    border: 1px solid black;  /* black border */
-    border-radius: 50%;       /* makes it circular */
-    background-color: #333;   /* dark gray fill */
+    border: 1px solid black; 
+    border-radius: 50%;      
+    background-color: #333;
     color: white;  
-    cursor: pointer;           /* sets svg stroke to white */
+    cursor: pointer;     
 }
 
 .icon-circle svg {
     width: 30px;
     height: 30px;
-    color: white;             /* ensures the stroke path is white */
+    color: white;        
 }
 
 .icon-circle:hover svg {
