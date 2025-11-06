@@ -254,8 +254,6 @@ section {
     justify-content: center;
 
     cursor: pointer;
-
-    z-index: 10;
 }
 
 .heart-svg {
@@ -264,13 +262,13 @@ section {
     fill: none;
     stroke: var(--dark-gray);
     stroke-width: 3;
-    transition: stroke 0.5s ease;
 }
 
 .heart-icon:hover svg {
     stroke: var(--red);
 
-    transform: scale(1.1);
+    transform: scale(1.2);
+    transition: stroke 0.3s ease, transform 0.5s ease;
 }
 
 .heart-icon.liked .heart-svg {
