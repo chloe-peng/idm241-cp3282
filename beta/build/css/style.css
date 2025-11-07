@@ -262,6 +262,7 @@ section {
     fill: none;
     stroke: var(--dark-gray);
     stroke-width: 3;
+    transition: stroke 0.3s ease, transform 0.5s ease;
 }
 
 .heart-icon:hover svg {
