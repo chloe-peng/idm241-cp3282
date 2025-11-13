@@ -275,6 +275,7 @@ section {
 .heart-icon.liked .heart-svg {
     fill: var(--color-heart-fill, var(--red));
     stroke: var(--color-heart-fill, var(--red));
+    transition: fill 0.3s ease;
 }
 
 .product-details {
