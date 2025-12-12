@@ -43,21 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
         heartIcon.classList.toggle('liked');
     });
 
-    cartButton.addEventListener('click', function(e) {
-        if (!this.classList.contains('added')) {
-            e.preventDefault();
-            
-            const text = this.querySelector('p');
-            
-            this.classList.add('text-changing');
-            
-            setTimeout(() => {
-                this.classList.add('added');
-                text.textContent = 'Added to Cart';
-                this.classList.remove('text-changing');
-            }, 200);
+    cartButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const textEl = cartButton.querySelector('.cart-text');
+
+        if (!cartButton.classList.contains('added')) {
+        cartButton.classList.add('text-changing');
+
+        setTimeout(() => {
+            cartButton.classList.add('added');
+            textEl.textContent = 'Added to Cart';
+            cartButton.classList.remove('text-changing');
+        }, 150);
+
         } else {
-            window.open('https://www.ikea.com/us/en/shoppingcart/', '_blank');
+        window.open('https://www.ikea.com/us/en/shoppingcart/', '_blank');
         }
     });
 });

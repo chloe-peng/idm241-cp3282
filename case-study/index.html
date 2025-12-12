@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section id="header" class="remove-border">
+        <h2>Ikea Product Pop-up Micro-interaction Case Study</h2>
+        <h4>IDM-241 | Chloe Peng </h4>
+        <div class="centered logo">
+            <img src="./media/ikea-logo.png" alt="ikea logo">
+        </div>
+
+        <div class="centered hero-img">
+            <img src="./media/hero-image.png" alt="image of final build">
+        </div>
+    </section>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Small interactions often define how an interface feels. This project focuses on redesigning an IKEA-inspired product card to enhance user experience through intentional micro-interactions and motion design. By analyzing and rebuilding existing behaviors, the final prototype introduces refined hover states, animated feedback, and persistent interaction modes that guide users through browsing, favoriting, and adding products to their cart—resulting in a cohesive, responsive, and satisfying final build.</p>
+    </section>
+
+    <section id="context">
+        <h2>Context</h2>
+        <p>
+        Recently after living off campus, I had to get furniture for my new apartment, which brought me to IKEA’s website.
+        As I was browsing through the website, I was drawn to IKEA's clean and modern layouts, but saw an opportunity to
+        introduce more microinteractions to their current ones.
+        </p>
+        <p>
+        Over the course of 11 weeks, the opportunity came to do so for a class project. The objective was for us to take
+        existing microinteractions from the website, recreate it and improve it by adding our own ideas. (But with code…)
+        </p>
+    </section>
+
+    <section id="background">
+        <h2>Background</h2>
+        <p>
+        In order to do so, we started to learn how to interpret the interactions we see on the screen by breaking them down
+        to the triggers, rules, feedback, and loops &amp; modes for each object I interacted with. (Very important to document this accurate)
+        </p>
+        <p>
+        To help we had 3 checkpoints, just to get the hang of it and increase the amount of objects to build microinteractions for.
+        From 1 → 3 → 5 (for our final build)
+        </p>
+    </section>
+
+    <section id="challenge">
+        <h2>Challenges<img src="./media/arrow-icon.png" alt="Arrow pointing to the bottom right" style="width: 20px; margin-left: 10px;"></h2>
+        <p>
+        While browsing the website, I stumbled upon a microinteraction that felt unique to a furniture site. There was a circle icon
+        on top of an image of a lamp, but when I hovered over the icon, a product card popped up creating an ah-ha moment.
+        When I clicked on it, it would bring me to the actual product page. But I thought, if there was already a pop-up,
+        there's an opportunity to add more functionality to what I was seeing.
+        </p>
+        <p>
+        The challenge began with understanding how to interpret what we saw into code, using HTML, CSS, and Javascript.
+        Also, improving the interactions into something that felt more intuitive for the user.
+        </p>
+    </section>
+
+    <section id="process-insight">
+        <h2>Process &amp; Insight</h2>
+
+        <article id="alpha" class="two-columns remove-border">
+            <div>
+                <h3>Alpha</h3>
+                <p>
+                    For the first step, we were allowed to choose any object we liked from a website of our choice.
+                </p>
+                <p>
+                    Initially I chose a different microinteraction from the website, being drawn into the smooth zoom in feature
+                    (with the feeling that I would definitely use this interaction for a project on my own).
+                </p>
+                <p>
+                    For this checkpoint, it was crucial that we replicated what we saw, but also documented exactly what it was doing.
+                </p>
+
+            </div>
+            <div class="gif-example centered">
+                <h4><strong>Here is it on its own:</strong></h4>
+                <img src="./media/alpha-anim.gif" alt="Animation of the alpha version">
+                <!-- <a href="#" target="_blank" rel="noopener">[Add Figma link]</a> -->
+            </div>
+        </article>
+
+        <article id="beta" class="remove-border">
+            <h3>Beta</h3>
+            <p>
+                Starting off with a simplified version (while looking towards my final version), I decided to code the pop-up interaction
+                and added some fun interactions on my own.
+            </p>
+
+            <h4>The three objects that I decided to change/add:</h4>
+            <div class="container-group">
+                <div class="container-box">
+                    <h5>Asterisk Symbol Button</h5>
+                    <p>
+                    Initially, I wasn't too drawn into the original circular icon and didn't feel compelled to interact with it.
+                    I replaced it with an asterisk (*) symbol to better communicate discovery and invite exploration.
+                    </p>
+                </div>
+                <div class="container-box">
+                    <h5>Heart Icon</h5>
+                    <p>
+                    This interaction was added to allow users to favorite the product without navigating away from the product
+                    page, creating a more efficient and expressive browsing experience.
+                    </p>
+                </div>
+                <div class="container-box">
+                    <h5>Add to Cart Button</h5>
+                    <p>
+                    The Add to Cart button was introduced as a secondary action that becomes available after engaging with the
+                    product card, reducing visual clutter while still supporting quick purchasing.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <p>
+                        Since I was making changes to what I saw on the screen, I didn't have an exact visual reference to explain how I wanted my animation to look like. 
+                        So I went to Figma to design and prototype the animation I wanted it to be.
+                    </p>
+                    <p>
+                        After confirming and adjusting any issues, I started to code it on VSCode!
+                    </p>
+                    
+                </div>
+                <h4><strong>Here's what I made:</strong></h4>
+                <div class="two-columns">
+                    <div class="gif-example centered">
+                        <h4>The Process:</h4>
+                        <img src="./media/beta-process.png" alt="Beta process">
+                    </div>
+                    <div class="gif-example centered">
+                        <h4>The Results:</h4>
+                        <img src="./media/beta-anim.gif" alt="Animation of the beta version">
+                    </div>
+                    <!-- <a href="#" target="_blank" rel="noopener">[Add Figma link]</a> -->
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="challenges">
+        <h2>Challenges</h2>
+
+        <h3>'Add to Cart' button was a 'Mode'</h3>
+        <p>
+        Intentionally, I wanted the Add to cart button to appear after users hovered over the product cart.
+        However, this was definitely the hardest part to interpret and code with many different interpretations on how it should be laid out.
+        </p>
+        <p>
+        However, after the crit for my Beta Description, I received feedback that certain objects should stay static
+        (originally, my product card would move 'up' at its hover state to make way for the 'Add-to-cart' button).
+        I changed it such that the pop-up card would stay in its place and simply factor in how much space the 'Add-to-cart' button would take
+        (in the end, was definitely the easier route).
+        </p>
+    </section>
+
+    <section id="solution">
+        <h2>Solution</h2>
+            <p>
+            For my final version, I wanted to take it a step further by adding two additional objects that introduce
+            more layered microinteractions.
+            </p>
+
+            <div class="container-group">
+
+            <div class="container-box">
+                <h5>Background Product Image</h5>
+                <p>
+                Inspired by the zoom effect I recreated in my Alpha, I carried this interaction into the final version
+                to maintain the same sense of depth and engagement when hovering over the product.
+                </p>
+            </div>
+
+            <div class="container-box">
+                <h5>Add to Cart Button</h5>
+                <p>
+                The arrow entering from the left of the text was inspired by hover interactions commonly seen on IKEA’s
+                website, helping maintain visual consistency with the original interface. Upon clicking, the button
+                provides clear feedback by changing the text to “Added to Cart” and transforming the arrow into a
+                checkmark to confirm a successful action.
+                </p>
+            </div>
+
+            </div>
+
+        <p>
+        Once again taking it to Figma to help me visualize. Here is an example of my recreation on Figma:
+        </p>
+        <div class="two-columns">
+            <div class="gif-example centered">
+                <h4>The Process:</h4>
+                <img src="./media/final-process.png" alt="final process">
+            </div>
+            <div class="gif-example centered">
+                <h4>The Results:</h4>
+                <img src="./media/final-anim.gif" alt="Animation of the final version">
+            </div>
+        </div>
+        <!-- <a href="#" target="_blank" rel="noopener">[Add Figma link]</a> -->
+    </section>
+
+    <section id="challenge-2">
+        <h2>Challenge</h2>
+        <h3>Centering the items inside of the button</h3>
+        <p>
+        In order to make sure that the interaction was picture perfect, I had the most trouble in making sure that at all stages
+        (not hovered, hovered, and clicked) that all the items (the text and icons) were to remain centered always on the screen.
+        </p>
+    </section>
+
+    <section id="results">
+        <h2>Results</h2>
+        <p>
+        In the end, I created a microinteraction with 5 total objects at hand to create the most holistic experience.
+        </p>
+        <p>
+        <strong>Here's the end result (you can interact with it as well!)</strong>
+        </p>
+
+        <div class="final-build-section">
+        <div class="product-container">
+            <a href="https://www.ikea.com/us/en/p/strandad-floor-lamp-white-black-70594842/">
+                <div class="product-image">
+                    <div class="cont-img">
+                        <a href="https://www.ikea.com/us/en/p/strandad-floor-lamp-white-black-70594842/" target="_blank">
+                            <img src="./media/ikea-lamp-img.jpg" alt="Ikea Lamp Image">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-info-button">
+                    <div class="product-info-card-full">
+                                <a href="https://www.ikea.com/us/en/p/strandad-floor-lamp-white-black-70594842/" target="_blank">
+                                    <div class="product-info-card">
+                                        <div class="product-info">
+                                            <div class="header-row">
+                                                <div class="new-badge">New</div>
+                                                <div class="heart-icon">
+                                                    <svg viewBox="0 0 24 24" class="heart-svg">
+                                                        <path class="heart-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+                                                            4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 
+                                                            19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="product-details">
+                                                <div class="product-name">STRANDAD</div>
+                                                <div class="product-description">Floor lamp</div>
+                                            </div>
+                                            <div class="price-container">
+                                                <div class="price-wrapper">
+                                                    <div class="price-dollar">$</div>
+                                                    <div class="price-main">19</div>
+                                                    <div class="price-cents">.99</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="cart-button">
+                                    <span class="cart-center">
+                                        <span class="cart-text">Add to Cart</span>
+
+                                        <span class="icon-slot">
+                                        <svg class="cart-icon arrow-icon" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12h14m-6-6 6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
+                                        <svg class="cart-icon check-icon" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 13l4 4L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        </span>
+                                    </span>
+                                </div>
+                    </div>
+
+                    <a href="https://www.ikea.com/us/en/p/strandad-floor-lamp-white-black-70594842/" target="_blank">
+                        <div class="asterisk-button">
+                            <span class="icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 5v14m-6.0622-3.5 12.1244-7m-12.1243 0 12.1243 7" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            <a>
+        </div>
+        </div>
+        <p>
+            <strong>Click here to see the full documentation:</strong>
+        </p>
+        <a href="../final/build/index.html" target="_blank" rel="noopener" class="button">Final Build</a>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

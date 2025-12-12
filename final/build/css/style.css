@@ -162,13 +162,13 @@ section {
 
 .product-container {
     position: relative;
-    width: 500px;
+    width: min(500px, 100%);
 }
 
 .product-image {
     display: block;
-    width: 500px;
-    height: auto;
+    width: 100%;
+    max-width: 500px;
 }
 .cont-img {
     width: 100%;
@@ -195,8 +195,8 @@ section {
     align-items: center;
     gap: 10px;
 
-    width: 250px;
-    height: 250px;
+    width: min(250px, 80%);
+    height: min(250px, 60vw);
 
     position: absolute;
     top: 50%;
@@ -236,86 +236,100 @@ section {
     pointer-events: auto;
 }
 
-.cart-button {
-    width: 200px;
-    height: 40px;
-    background-color: var(--blue);
-    margin-top: 0;
+.cart-button{
+  width: 200px;
+  height: 40px;
+  background-color: var(--blue);
 
-    display: flex;
+  opacity: 0;
+  transition: opacity 0.5s ease, background-color 0.3s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.cart-button.show{ 
+    opacity: 1; 
+}
+.cart-button:hover{ 
+    background-color: #005C90; 
+}
+
+.cart-button{
+    --icon-size: 24px;
+    --icon-gap: 8px;
+    --shift: calc((var(--icon-size) + var(--icon-gap)) / 2);
+}
+
+.cart-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateX(var(--shift));
+
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    opacity: 0;
-    transition: opacity 0.5s ease;
-
-    cursor: pointer;
+    gap: var(--icon-gap);
+    pointer-events: none;
+    transition: transform 0.25s ease;
 }
 
-.cart-button.show {
-    opacity: 1;
-    transition: opacity 0.5s ease;
+.cart-button:hover .cart-center,
+.cart-button.added .cart-center {
+    transform: translate(-50%, -50%) translateX(0);
 }
 
-.cart-button p{
+.cart-text {
+    font-family: var(--font-sans);
+    font-size: 18px;
     color: white;
     margin: 0;
-    transition: transform 0.3s ease;
+    white-space: nowrap;
+
+    transition: opacity 0.8s ease, transform 0.5s ease;
 }
 
-.cart-button:hover {
-    background-color: #005C90;
-}
-
-.cart-icon {
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.arrow-icon {
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-.check-icon {
-    display: none;
-    transform: scale(0) rotate(-90deg);
+.icon-slot{
+    width: var(--icon-size);
+    height: var(--icon-size);
     position: relative;
-    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.cart-button:hover .arrow-icon {
+.cart-icon{
+    position: absolute;
+    inset: 0;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.arrow-icon{ 
+    opacity: 0; 
+    transform: translateX(-6px); 
+}
+.check-icon{ 
+    opacity: 0; 
+    transform: scale(0.7) rotate(-90deg); 
+}
+
+.cart-button:not(.added):hover .arrow-icon{
     opacity: 1;
     transform: translateX(0);
 }
 
-.cart-button:hover p {
-    transform: translateX(4px);
+.cart-button.added .arrow-icon{ 
+    opacity: 0; 
+    transform: translateX(-6px); 
 }
-
-.cart-button.added .arrow-icon {
-    display: none;
-    transform: translateX(-20px);
-}
-
-.cart-button.added .check-icon {
-    display: block;
+.cart-button.added .check-icon{
     opacity: 1;
     transform: scale(1) rotate(0deg);
-    position: relative;
 }
 
-.cart-button.added p {
-    transform: translateX(0);
-}
-
-.cart-button p {
-    transform: translateX(0);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.cart-button.text-changing p {
-    opacity: 0;
+.cart-button.text-changing .cart-text{ 
+    opacity: 0; 
+    transition: transform 0.3s ease;
 }
 
 .product-info {
@@ -341,37 +355,32 @@ section {
     line-height: 15px;
 }
 
-.heart-icon {
-    width: 19px;
-    height: 19px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-}
-
-.heart-svg {
+.heart-svg{
     width: 20px;
     height: 19px;
-    fill: none;
+}
+
+.header-row,
+.heart-icon {
+    overflow: visible;
+}
+
+.heart-path{
+    fill: transparent;
     stroke: var(--dark-gray);
     stroke-width: 3;
-    transition: stroke 0.5s ease, transform 0.5s ease;
+    transition: fill 0.4s ease, stroke 0.3s ease, transform 0.5s ease;
+    transform-origin: center;
 }
 
-.heart-icon:hover svg {
+.heart-icon:hover .heart-path{
     stroke: var(--red);
-
-    transform: scale(1.2);
-    transition: stroke 0.5s ease, transform 0.5s ease;
+    transform: scale(1.1);
 }
 
-.heart-icon.liked .heart-svg {
-    fill: var(--color-heart-fill, var(--red));
-    stroke: var(--color-heart-fill, var(--red));
-    transition: fill 0.8s ease;
+.heart-icon.liked .heart-path{
+    fill: var(--red);
+    stroke: var(--red);
 }
 
 .product-details {
